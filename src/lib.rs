@@ -44,8 +44,6 @@ pub fn process_one_vcf(in_fp: &PathBuf, out_fp: &PathBuf, snps: &SNPsdb) -> Resu
 
     let reader = BufReader::new(File::open(in_fp)?);
 
-    println!("processing {:?}", out_fp);
-
     for line in reader.lines() {
         let this_line = line.unwrap();
 
