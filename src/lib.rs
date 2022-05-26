@@ -33,7 +33,6 @@ pub fn load_snps(fp: &PathBuf) -> Result<SNPsdb> {
 
             let _ = snps.entry(chr.to_owned()).or_insert(HashMap::new());
             snps.get_mut(&chr).unwrap().insert(pos, (ref_allele, alt));
-            //*chr_hashmap.insert(pos, alt);
         }
     }
 
@@ -41,8 +40,6 @@ pub fn load_snps(fp: &PathBuf) -> Result<SNPsdb> {
 }
 
 pub fn process_one_vcf(in_fp: &PathBuf, out_fp: &PathBuf, snps: &SNPsdb) -> Result<()> {
-    //let out_file = File::open(out_fp)?;
-    //let mut writer = BufWriter::new(File::open(out_fp)?);
     let mut out_buffer = File::create(out_fp).unwrap();
 
     let reader = BufReader::new(File::open(in_fp)?);
@@ -62,7 +59,6 @@ pub fn process_one_vcf(in_fp: &PathBuf, out_fp: &PathBuf, snps: &SNPsdb) -> Resu
                 .strip_prefix("chr")
                 .unwrap()
                 .to_owned();
-            //let chr = split.next().unwrap().parse::<usize>()?;
             let pos = split.next().unwrap().parse::<usize>()?;
             let ref_allele = split.nth(1).unwrap().to_owned();
             let alt = split.next().unwrap().to_owned();
@@ -103,13 +99,4 @@ pub fn subtract_snps(vcfs_in: &PathBuf, vcfs_out_dir: &PathBuf, snps: &SNPsdb) -
     }
 
     Ok(())
-}
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
-    }
 }
