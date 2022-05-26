@@ -20,9 +20,9 @@ fn main() -> Result<()> {
         let vcfs_out_dir = PathBuf::from(args.get(3).unwrap());
         
         if !vcfs_out_dir.exists() {
-            create_dir(vcfs_out_dir);
+            create_dir(&vcfs_out_dir)?;
         } else if !vcfs_out_dir.is_dir() {
-            panic!("{vcfs_out_dir} is not a directory");
+            panic!("{:?} is not a directory", vcfs_out_dir);
         }
 
         let snps = load_snps(&snps_fp)?;
