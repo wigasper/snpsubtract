@@ -1,0 +1,68 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##bcftoolsVersion=1.14+htslib-1.14
+##contig=<ID=chr1,length=248956422>
+##contig=<ID=chr10,length=133797422>
+##contig=<ID=chr11,length=135086622>
+##contig=<ID=chr11_KI270721v1_random,length=100316>
+##contig=<ID=chr12,length=133275309>
+##contig=<ID=chr13,length=114364328>
+##contig=<ID=chr14,length=107043718>
+##contig=<ID=chr14_GL000009v2_random,length=201709>
+##contig=<ID=chr14_GL000225v1_random,length=211173>
+##contig=<ID=chr14_KI270722v1_random,length=194050>
+##contig=<ID=chr14_GL000194v1_random,length=191469>
+##contig=<ID=chr14_KI270723v1_random,length=38115>
+##contig=<ID=chr14_KI270724v1_random,length=39555>
+##contig=<ID=chr14_KI270725v1_random,length=172810>
+##contig=<ID=chr14_KI270726v1_random,length=43739>
+##contig=<ID=chr15,length=101991189>
+##contig=<ID=chr15_KI270727v1_random,length=448248>
+##contig=<ID=chr16,length=90338345>
+##contig=<ID=chr16_KI270728v1_random,length=1872759>
+##contig=<ID=chr17,length=83257441>
+##contig=<ID=chr17_GL000205v2_random,length=185591>
+##contig=<ID=chr17_KI270729v1_random,length=280839>
+##contig=<ID=chr17_KI270730v1_random,length=112551>
+##contig=<ID=chr18,length=80373285>
+##contig=<ID=chr19,length=58617616>
+##contig=<ID=chr1_KI270706v1_random,length=175055>
+##contig=<ID=chr1_KI270707v1_random,length=32032>
+##contig=<ID=chr1_KI270708v1_random,length=127682>
+##ALT=<ID=*,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of raw reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Read Position Bias (closer to 0 is better)">
+##INFO=<ID=MQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality Bias (closer to 0 is better)">
+##INFO=<ID=BQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Base Quality Bias (closer to 0 is better)">
+##INFO=<ID=MQSBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality vs Strand Bias (closer to 0 is better)">
+##INFO=<ID=SCBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Soft-Clip Length Bias (closer to 0 is better)">
+##INFO=<ID=FS,Number=1,Type=Float,Description="Phred-scaled p-value using Fisher's exact test to detect strand bias">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric.">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Average mapping quality">
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
+##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	temp/PT084_P8_G02_S266.sorted.bam
+chr1	631862	.	G	A	78.2216	.	DP=10;VDB=0.0663569;SGB=-0.651104;RPBZ=2.12132;MQBZ=3;MQSBZ=1.22474;BQBZ=-0.144338;SCBZ=-1.30437;FS=0;MQ0F=0;AC=2;AN=2;DP4=2,0,4,4;MQ=16;ANN=A|upstream_gene_variant|MODIFIER|LOC101928626|LOC101928626|transcript|NR_125957.1|pseudogene||n.-2853C>T|||||2853|,A|downstream_gene_variant|MODIFIER|MIR12136|MIR12136|transcript|NR_162149.1|pseudogene||n.*753C>T|||||753|,A|intergenic_region|MODIFIER|LOC101928626-MIR12136|LOC101928626-MIR12136|intergenic_region|LOC101928626-MIR12136|||n.631862G>A||||||	GT:PL	1/1:105,13,0
+chr1	9936560	.	C	T	70.4148	.	DP=8;VDB=0.637622;SGB=-0.636426;MQSBZ=0;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,5,2;MQ=20;ANN=T|synonymous_variant|LOW|LZIC|LZIC|transcript|NM_001316974.2|protein_coding|3/8|c.123G>A|p.Leu41Leu|213/4832|123/636|41/211||,T|synonymous_variant|LOW|LZIC|LZIC|transcript|NM_001316975.2|protein_coding|3/8|c.60G>A|p.Leu20Leu|270/965|60/618|20/205||,T|synonymous_variant|LOW|LZIC|LZIC|transcript|NM_001316973.2|protein_coding|3/8|c.60G>A|p.Leu20Leu|270/4889|60/573|20/190||,T|synonymous_variant|LOW|LZIC|LZIC|transcript|NM_001316976.2|protein_coding|3/6|c.60G>A|p.Leu20Leu|270/4711|60/438|20/145||,T|synonymous_variant|LOW|LZIC|LZIC|transcript|NM_032368.5|protein_coding|3/8|c.60G>A|p.Leu20Leu|370/4989|60/573|20/190||	GT:PL	1/1:100,21,0
+chr1	20652339	.	T	C	65.4148	.	DP=6;VDB=0.168702;SGB=-0.616816;MQSBZ=0;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,4,2;MQ=20;ANN=C|3_prime_UTR_variant|MODIFIER|DDOST|DDOST|transcript|NM_005216.4|protein_coding|11/11|c.*40A>G|||||40|,C|upstream_gene_variant|MODIFIER|PINK1-AS|PINK1-AS|transcript|NR_046507.1|pseudogene||n.-146A>G|||||146|,C|downstream_gene_variant|MODIFIER|PINK1|PINK1|transcript|NM_032409.3|protein_coding||c.*1648T>C|||||828|	GT:PL	1/1:95,18,0
+chr1	27127463	.	T	G	30.4183	.	DP=4;VDB=0.00766117;SGB=-0.556411;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,4,0;MQ=20;ANN=G|intron_variant|MODIFIER|SLC9A1|SLC9A1|transcript|NM_003047.5|protein_coding|1/11|c.353-13177A>C||||||,G|intron_variant|MODIFIER|SLC9A1|SLC9A1|transcript|NR_046474.2|pseudogene|1/10|n.1144-17686A>C||||||	GT:PL	1/1:60,12,0
+chr1	27127464	.	C	T	30.4183	.	DP=4;VDB=0.00872848;SGB=-0.556411;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,4,0;MQ=20;ANN=T|intron_variant|MODIFIER|SLC9A1|SLC9A1|transcript|NM_003047.5|protein_coding|1/11|c.353-13178G>A||||||,T|intron_variant|MODIFIER|SLC9A1|SLC9A1|transcript|NR_046474.2|pseudogene|1/10|n.1144-17687G>A||||||	GT:PL	1/1:60,12,0
+chr1	30958121	.	C	A	44.4146	.	DP=6;VDB=0.215799;SGB=-0.616816;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,0,6;MQ=20;ANN=A|intron_variant|MODIFIER|PUM1|PUM1|transcript|NM_001020658.2|protein_coding|14/21|c.2324-4140G>T||||||,A|intron_variant|MODIFIER|PUM1|PUM1|transcript|NM_014676.3|protein_coding|14/21|c.2324-4140G>T||||||	GT:PL	1/1:74,18,0
+chr14	70377490	.	C	A	43.4147	.	DP=4;VDB=0.87268;SGB=-0.556411;MQSBZ=0;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,2,2;MQ=20;ANN=A|intron_variant|MODIFIER|SYNJ2BP-COX16|SYNJ2BP-COX16|transcript|NM_001202547.2|protein_coding|2/5|c.202-1719G>T||||||,A|intron_variant|MODIFIER|SYNJ2BP|SYNJ2BP|transcript|NM_018373.3|protein_coding|2/3|c.202-1719G>T||||||,A|intron_variant|MODIFIER|SYNJ2BP-COX16|SYNJ2BP-COX16|transcript|NM_001202548.2|protein_coding|2/5|c.202-1719G>T||||||,A|intron_variant|MODIFIER|SYNJ2BP-COX16|SYNJ2BP-COX16|transcript|NM_001202549.2|protein_coding|2/4|c.202-1719G>T||||||	GT:PL	1/1:73,12,0
+chrX	119851786	.	A	AA	38.415	.	INDEL;IDV=6;IMF=0.375;DP=16;VDB=0.00376034;SGB=-0.590765;RPBZ=2.76501;MQBZ=0;MQSBZ=0;SCBZ=-2.0226;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,0,5;MQ=20;ANN=AA|frameshift_variant|HIGH|UPF3B|UPF3B|transcript|NM_080632.2|protein_coding|2/11|c.243_244insT|p.Ser84fs|343/2404|243/1452|81/483||,AA|frameshift_variant|HIGH|UPF3B|UPF3B|transcript|NM_023010.3|protein_coding|2/10|c.243_244insT|p.Ser84fs|343/2365|243/1413|81/470||;LOF=(UPF3B|UPF3B|2|1.00)	GT:PL	1/1:68,15,0
+chrX	134428504	.	T	C	76.4149	.	DP=7;VDB=0.200896;SGB=-0.636426;MQSBZ=0;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,4,3;MQ=20;ANN=C|3_prime_UTR_variant|MODIFIER|PHF6|PHF6|transcript|NM_001015877.2|protein_coding|11/11|c.*2844T>C|||||3174|,C|3_prime_UTR_variant|MODIFIER|PHF6|PHF6|transcript|NM_032458.3|protein_coding|10/10|c.*3174T>C|||||3174|	GT:PL	1/1:106,21,0
+chrY	11518440	.	A	G	48.4146	.	DP=8;VDB=8.74532e-05;SGB=-0.651104;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,8,0;MQ=17;ANN=G|intergenic_region|MODIFIER|TTTY23-GYG2P1|TTTY23.2-GYG2P1|intergenic_region|TTTY23.2-GYG2P1|||n.11518440A>G||||||	GT:PL	1/1:78,24,0
+chrY	11518441	.	T	A	46.4146	.	DP=8;VDB=7.76057e-05;SGB=-0.651104;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,8,0;MQ=17;ANN=A|intergenic_region|MODIFIER|TTTY23-GYG2P1|TTTY23.2-GYG2P1|intergenic_region|TTTY23.2-GYG2P1|||n.11518441T>A||||||	GT:PL	1/1:76,24,0
+chrY	11518443	.	A	T	48.4146	.	DP=8;VDB=6.24572e-05;SGB=-0.651104;FS=0;MQ0F=0;AC=2;AN=2;DP4=0,0,8,0;MQ=17;ANN=T|intergenic_region|MODIFIER|TTTY23-GYG2P1|TTTY23.2-GYG2P1|intergenic_region|TTTY23.2-GYG2P1|||n.11518443A>T||||||	GT:PL	1/1:78,24,0
+chrY	11518446	.	T	G	42.4147	.	DP=13;VDB=0.0297111;SGB=-0.680642;FS=0;MQ0F=0.153846;AC=2;AN=2;DP4=0,0,12,0;MQ=12;ANN=G|intergenic_region|MODIFIER|TTTY23-GYG2P1|TTTY23.2-GYG2P1|intergenic_region|TTTY23.2-GYG2P1|||n.11518446T>G||||||	GT:PL	1/1:72,36,0
