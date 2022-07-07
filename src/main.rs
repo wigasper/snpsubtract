@@ -1,6 +1,6 @@
 use std::env;
-use std::path::PathBuf;
 use std::fs::create_dir;
+use std::path::PathBuf;
 
 use snpsubtract::{load_snps, subtract_snps};
 
@@ -18,7 +18,7 @@ fn main() -> Result<()> {
         let vcfs_dir = PathBuf::from(args.get(1).unwrap());
         let snps_fp = PathBuf::from(args.get(2).unwrap());
         let vcfs_out_dir = PathBuf::from(args.get(3).unwrap());
-        
+
         if !vcfs_out_dir.exists() {
             create_dir(&vcfs_out_dir)?;
         } else if !vcfs_out_dir.is_dir() {

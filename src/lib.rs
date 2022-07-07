@@ -51,12 +51,18 @@ pub fn process_one_vcf(in_fp: &PathBuf, out_fp: &PathBuf, snps: &SNPsdb) -> Resu
             out_buffer.write(format!("{}\n", this_line).as_bytes())?;
         } else {
             let mut split = this_line.split("\t");
-            let chr = split
-                .next()
-                .unwrap()
-                .strip_prefix("chr")
-                .unwrap()
-                .to_owned();
+            
+            let mut chr: String = "".to_owned();
+
+            if let Some(stripped) = split.next().unwrap().strip_prefix("chr") {
+                chr = Some(stripped).unwrap().to_owned();
+            } else {
+                println!(
+                    "WARNING - could not strip 'chr' prefix, bad line: \n{:?}",
+                    this_line
+                );
+            }
+
             let pos = split.next().unwrap().parse::<usize>()?;
             let ref_allele = split.nth(1).unwrap().to_owned();
             let alt = split.next().unwrap().to_owned();
@@ -75,7 +81,6 @@ pub fn process_one_vcf(in_fp: &PathBuf, out_fp: &PathBuf, snps: &SNPsdb) -> Resu
                         reference genome?"
                     );
                 }
-                //
 
                 if !snps.get(&chr).unwrap().get(&pos).unwrap().1.contains(&alt) {
                     out_buffer.write(format!("{}\n", this_line).as_bytes())?;
