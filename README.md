@@ -1,4 +1,4 @@
-![](https://github.com/wigasper/snpsubtract/workflows/build/badge.svg)
+![](https://github.com/wigasper/snpsubtract/workflows/deploy/badge.svg)
 
 # snpsubtract
 
