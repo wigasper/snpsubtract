@@ -7,3 +7,11 @@ Subtracts common variants from VCF files using a VCF containing common variants 
 ```
 $ snpsubtract vcfs_in_directory snps_db.vcf vcfs_out_directory
 ```
+
+Build with Rust
+
+```bash
+$ cargo build --release
+```
+
+Or just download a binary from the Releases page
